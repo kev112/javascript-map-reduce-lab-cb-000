@@ -1,5 +1,3 @@
-
-
 const issues = [
   {
     "body": "Instructions say GET /team and POST /newteam. Rspec wants GET/newteam and POST/team.",
@@ -9002,3 +9000,7 @@ const issues = [
     "url": "https://api.github.com/repos/learn-co-curriculum/js-donut-lab/issues/2"
   }
 ];
+
+let issuesWithUpdatedApiUrl = issues.map(issue => {
+  Object.assign({}, { url: issue.url.replace('api', 'api-v2')});
+});
